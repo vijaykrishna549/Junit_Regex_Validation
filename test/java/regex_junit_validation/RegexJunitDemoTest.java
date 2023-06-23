@@ -44,10 +44,10 @@ class RegexJunitDemoTest {
     void validateMobile() throws RegexException {
         RegexJunitDemo rj = new RegexJunitDemo();
 
-        String password = "91 9876543299";
+        String mobile = "91 9876543299";
         String regPattern = "^([1-9]{2}[- ]?[1-9]{1}[0-9]{9})$";
         try{
-            assertTrue(rj.validateRegex(regPattern,password),"The regex pattern for password is wrong");
+            assertTrue(rj.validateRegex(regPattern,mobile),"The regex pattern for mobile is wrong");
         }
         catch (RegexException regexException){
             System.out.println("Caught the exception");
