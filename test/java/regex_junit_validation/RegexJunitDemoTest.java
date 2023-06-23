@@ -39,14 +39,11 @@ class RegexJunitDemoTest {
 
     }
 
+//    Validation of different e-mail samples with regex and junit
     @Test
     void validateMobile() throws RegexException {
         RegexJunitDemo rj = new RegexJunitDemo();
-<<<<<<< Updated upstream
-        String mob = "91 1234567898";
-        String regPattern = "^([1-9]{2}[- ]?[1-9]{1}[0-9]{9})$";
-        assertTrue(rj.validateRegex(regPattern,mob),"The regex pattern for mobile is wrong");
-=======
+
         String password = "91 9876543299";
         String regPattern = "^([1-9]{2}[- ]?[1-9]{1}[0-9]{9})$";
         try{
@@ -57,7 +54,7 @@ class RegexJunitDemoTest {
             // printing the message from InvalidAgeException object
             System.out.println("Exception occurred: " + regexException);
         }
->>>>>>> Stashed changes
+
     }
 
     @Test
@@ -74,8 +71,6 @@ class RegexJunitDemoTest {
             System.out.println("Exception occurred: " + regexException);
         }
     }
-<<<<<<< Updated upstream
-=======
     @Test
     void validateEmailSamples() throws RegexException {
 
@@ -106,5 +101,5 @@ class RegexJunitDemoTest {
             System.out.println("Exception occurred: " + regexException);
         }
     }
->>>>>>> Stashed changes
+
 }
