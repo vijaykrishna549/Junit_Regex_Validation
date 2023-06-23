@@ -15,8 +15,16 @@ public class RegexJunitDemo {
     public RegexJunitDemo() {
     }
 
-    public boolean validateRegex(String regexPattern, String content) {
+    public boolean validateRegex (String regexPattern, String content) throws RegexException{
         boolean isTrue = Pattern.matches(regexPattern, content);
+        if(isTrue){
+            System.out.println("Regex passed");
+        }
+        else {
+            throw new RegexException("Regex Failed");
+//            System.out.println("Regex failed");
+        }
         return isTrue;
+
     }
 }
