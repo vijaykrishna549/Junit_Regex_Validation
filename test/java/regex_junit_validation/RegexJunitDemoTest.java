@@ -26,6 +26,21 @@ class RegexJunitDemoTest {
     @Test
     void validateMobile() {
         RegexJunitDemo rj = new RegexJunitDemo();
+        String mobile = "91 9812398769";
+        String regPattern = "^|91[ ][6789]{1}[0-9]{9}$";
+        assertTrue(rj.validateRegex(regPattern,mobile),"The regex pattern for mobile is wrong");
+    }
+
+    @Test
+    void validatePassword() {
+        RegexJunitDemo rj = new RegexJunitDemo();
+        String password = "@erttyR34";
+        String regPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#]*)[a-zA-Z0-9@!#*]{8,}";
+        assertTrue(rj.validateRegex(regPattern,password),"The regex pattern for password is wrong");
+    }
+    @Test
+    void validateEmailSamples() {
+        RegexJunitDemo rj = new RegexJunitDemo();
         String email1 = "abc@yahoo.com";
         String email2 = "abc-100@yahoo.com";
         String email3 = "abc111@abc,com";
@@ -43,21 +58,5 @@ class RegexJunitDemoTest {
         assertTrue(rj.validateRegex(regPattern,email6),"The regex pattern for email 6 is wrong");
         assertTrue(rj.validateRegex(regPattern,email7),"The regex pattern for email 7 is wrong");
         assertTrue(rj.validateRegex(regPattern,email8),"The regex pattern for email 8 is wrong");
-
-    }
-
-    @Test
-    void validatePassword() {
-        RegexJunitDemo rj = new RegexJunitDemo();
-        String password = "@erttyR34";
-        String regPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#]*)[a-zA-Z0-9@!#*]{8,}";
-        assertTrue(rj.validateRegex(regPattern,password),"The regex pattern for password is wrong");
-    }
-    @Test
-    void validateEmailSamples() {
-        RegexJunitDemo rj = new RegexJunitDemo();
-        String password = "@erttyR34";
-        String regPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#]*)[a-zA-Z0-9@!#*]{8,}";
-        assertTrue(rj.validateRegex(regPattern,password),"The regex pattern for password is wrong");
     }
 }
