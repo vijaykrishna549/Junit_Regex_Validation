@@ -27,4 +27,5 @@ public class RegexJunitDemo {
         return isTrue;
 
     }
+//    lambda demo
 }
